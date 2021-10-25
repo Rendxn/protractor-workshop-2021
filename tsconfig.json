@@ -6,6 +6,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedParameters": true,
-    "noUnusedLocals": true
-  }
+    "noUnusedLocals": true,
+    "types": ["node", "jasminewd2"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "protractor/**/*.ts"]
 }
