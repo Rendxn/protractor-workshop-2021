@@ -11,16 +11,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import'],
   settings: {
     'import/extensions': ['.ts'],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts'],
     },
     'import/resolver': {
-      node: {
-        extensions: ['.ts'],
-      },
+      typescript: {},
     },
   },
   rules: {
@@ -28,7 +26,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['protractor/**/*.ts', 'test/**/*.ts'],
+        devDependencies: ['protractor/**/*.ts', 'test/**/*.ts', 'src/**/*.ts'],
       },
     ],
     'import/extensions': ['error', 'ignorePackages', {

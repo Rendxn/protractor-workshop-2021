@@ -7,7 +7,15 @@
     "moduleResolution": "node",
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "types": ["node", "jasminewd2"]
+    "types": ["node", "jasminewd2"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@/*": ["./*"],
+      "~/*": ["./src/*"],
+      "~~/*": ["./*"],
+      "test/*": ["test/*"]
+    }
   },
   "include": ["src/**/*.ts", "test/**/*.ts", "protractor/**/*.ts"]
 }
