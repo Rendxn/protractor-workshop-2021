@@ -1,4 +1,5 @@
 import { browser, Config } from 'protractor';
+import awesomeReport from './helpers/awesome-report';
 import { reporter } from './helpers/reporter';
 
 export const config: Config = {
@@ -14,5 +15,6 @@ export const config: Config = {
     browser.ignoreSynchronization = true;
     browser.manage().timeouts().implicitlyWait(0);
     reporter();
+    awesomeReport();
   },
 };
